@@ -1,0 +1,17 @@
+
+##### Hibernate properties #######
+db.driver: com.mysql.jdbc.Driver
+db.url: jdbc:mysql://localhost:3306/datacreation?autoReconnect:true&useSSL:false
+db.username: root
+db.password: root
+
+#connection settings
+hibernate.connection.autoReconnect: true
+hibernate.connection.provider_class: org.hibernate.connection.C3P0ConnectionProvider
+hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
+spring.jpa.database-platform: org.hibernate.dialect.MySQLDialect
+hibernate.hbm2ddl.auto: update
+hibernate.show_sql: true
+entitymanager.packagesToScan: com.sedex.bdd.automation
+
+path.chrome.driver: C:\Chrome_Driver\chromedriver.exe
