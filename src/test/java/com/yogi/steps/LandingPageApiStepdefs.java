@@ -5,10 +5,13 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import net.thucydides.core.annotations.Steps;
 
+
 import java.util.List;
 import java.util.Map;
 
 public class LandingPageApiStepdefs {
+
+
 
     @Steps
     private SerenityRestClient serenityRestClient;
@@ -25,7 +28,7 @@ public class LandingPageApiStepdefs {
 
     @Then("^User (.*) verify following product API from dropdown$")
     public void user_verify_following_product_from_dropdown(final String expectedStatusCode, Map<String, String> productCatalogue) throws Throwable {
-       productCatalogue
+        productCatalogue
                .entrySet()
                .stream()
                .forEach(products ->serenityRestClient.getApiProductsOfDropDown(products.getKey() ,products.getValue() , expectedStatusCode));

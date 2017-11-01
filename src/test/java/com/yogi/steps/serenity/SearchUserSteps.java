@@ -39,7 +39,7 @@ public class SearchUserSteps extends ScenarioSteps {
     }
 
     @Step
-    public void verify_search_keyword_in_result_page(String searchText) {
+    public void verify_search_criteria_in_response(String searchText) {
         assertThat(etsySearchPage.getResultHeader(), containsString("\"" +searchText + "\""));
     }
 

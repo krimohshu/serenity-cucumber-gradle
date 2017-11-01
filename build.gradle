@@ -3,6 +3,7 @@ version '1.0-SNAPSHOT'
 
 
 repositories {
+   // mavenLocal()
     mavenCentral()
     jcenter()
 
@@ -10,47 +11,46 @@ repositories {
 
 buildscript {
     repositories {
-        mavenLocal()
+       // mavenLocal()
         jcenter()
     }
     dependencies {
-        classpath("net.serenity-bdd:serenity-gradle-plugin:1.1.1")
+        classpath("net.serenity-bdd:serenity-gradle-plugin:1.1.40")
         classpath("com.github.samueltbrown:gradle-cucumber-plugin:0.9")
+        classpath 'me.tatarka:gradle-retrolambda:3.7.0'
     }
 }
 
 apply plugin: 'java'
+compileJava {
+    sourceCompatibility = '1.8'
+}
 apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'net.serenity-bdd.aggregator'
+apply plugin: 'me.tatarka.retrolambda'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
-    def SERENITY_VERSION = "1.6.7-rc.1"
+    def SERENITY_VERSION = "1.6.5"
 
     compile 'net.serenity-bdd:serenity-core:' + SERENITY_VERSION
     compile 'net.serenity-bdd:serenity-rest-assured:' + SERENITY_VERSION
-    compile group: 'net.serenity-bdd', name: 'serenity-cucumber', version: '1.5.13'
-    compile group: 'info.cukes', name: 'cucumber-core', version: '1.2.5'
-    testCompile('junit:junit:4.12')
+    testCompile 'net.serenity-bdd:serenity-cucumber:1.5.15'
     testCompile 'org.assertj:assertj-core:3.1.0'
+    testCompile 'org.slf4j:slf4j-simple:1.7.12'
     testCompile 'com.googlecode.lambdaj:lambdaj:2.3.3'
     testCompile 'io.codearte.jfairy:jfairy:0.5.3'
     compile 'net.serenity-bdd:serenity-screenplay:' + SERENITY_VERSION
     compile 'net.serenity-bdd:serenity-screenplay-webdriver:' + SERENITY_VERSION
     compile 'net.serenity-bdd:browse-the-web:1.1.34'
     testCompile 'net.serenity-bdd:serenity-junit:' + SERENITY_VERSION
-    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '2.41.0'
-    // https://mvnrepository.com/artifact/org.slf4j/slf4j-simple
-   testCompile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.25'
-
-    // https://mvnrepository.com/artifact/org.hibernate/hibernate-gradle-plugin
-    compile group: 'org.hibernate', name: 'hibernate-gradle-plugin', version: '4.3.4.Final'
-// https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
+    compile group: 'net.serenity-bdd', name: 'serenity-junit', version: '1.6.5'
+    compile group: 'net.serenity-bdd', name: 'serenity-report-resources', version: '1.6.5'
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.5.3'
     compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.0.1'
-
 
 }
 

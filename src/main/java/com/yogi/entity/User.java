@@ -1,13 +1,13 @@
 package com.yogi.entity;
 //Will be entity class - and signUp user will store into it.
 
-import javax.persistence.*;
+
 import java.io.Serializable;
 
 /*@Entity
 @Table(name = "User")*/
 public class User  implements Serializable {
-    private static final long serialVersionUID = 1L;
+   /* private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -53,5 +53,5 @@ public class User  implements Serializable {
 
     public void setPassword(String password) {
         this.password = password;
-    }
+    }*/
 }

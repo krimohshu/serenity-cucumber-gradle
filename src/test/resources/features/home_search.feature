@@ -22,7 +22,6 @@ Feature: Home search
     Given Alex navigate to the Etsy home page
     When he selects product from "<iconLink>" icon search
     Then the result should have "<verifySearchText>" link text
-   # the result should contain "<verifySearchText>"
     Examples:
       | iconLink                 |  verifySearchText     |
       | Home & Living            | Home & Living         |

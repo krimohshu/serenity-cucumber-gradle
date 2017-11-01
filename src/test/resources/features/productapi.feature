@@ -1,7 +1,7 @@
 @Home_Search
 Feature: Serenity Rest Assured API test
 
-  @api @productsearch @restapi
+  @api @productsearch @restapi1
   Scenario: Product search via drop down api
     #When Alex GET home page api
     Then User successfully verify following product API from dropdown
@@ -10,7 +10,7 @@ Feature: Serenity Rest Assured API test
 #Endpoints->  #https://www.etsy.com/uk/c/home-and-living/bathroom?ref=catnav-891  ;httpMethod=GET
 #https://www.etsy.com/uk/c/accessories/hair-accessories?ref=catnav-10855    ; httpMethod=GET
 
-  @api @productsearch @restapi
+  @api @productsearch @restapi2
   Scenario: Product search via search box api
     When Alex GET home page api
     And he search for shoe shine product

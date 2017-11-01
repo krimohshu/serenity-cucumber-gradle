@@ -82,10 +82,10 @@ public class SearchStepdefs {
 
     }
 
-    @Then("^the result should contain (.*)$")
+   /* @Then("^the result should contain (.*)$")
     public void result_should_contain_menu_item(String expectedKeyword) {
-        user.verify_search_keyword_in_result_page(expectedKeyword);
-    }
+        user.verify_search_criteria_in_response(expectedKeyword);
+    }*/
 
     @Then("^Then he can see category (.*)$")
     public void homepage_should_contain_categories(String category) {
